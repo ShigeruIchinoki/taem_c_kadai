@@ -17,4 +17,8 @@ class TaemCKadaiTest < Minitest::Test
     assert_equal 80.52910052910052, TaemCKadai.needed_calorie_by_sleeping("M", 10)
   end
 
+  #bii
+  def test_needed_bmi
+    assert_equal 10000, TaemCKadai.needed_bmi(1, 1)
+  end
 end
