@@ -5,7 +5,7 @@ class TaemCKadaiTest < Minitest::Test
     refute_nil ::TaemCKadai::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_needed_calorie
+    assert_equal 761, TaemCKadai.japanese_bee("M", 10)
   end
 end
