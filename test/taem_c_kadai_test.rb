@@ -10,7 +10,7 @@ class TaemCKadaiTest < Minitest::Test
   end
 
   def test_needed_bmi
-    assert_equal 10000, TaemCKadai.japanese_bee(1, 1)
+    assert_equal 10000, TaemCKadai.needed_bmi(1, 1)
   end
 
 end
