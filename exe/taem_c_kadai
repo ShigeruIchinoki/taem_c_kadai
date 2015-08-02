@@ -2,4 +2,4 @@
 
 require "taem_c_kadai"
 
-TaemCKadai.main
+TaemCKadai.ask
