@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "taem_c_kadai"
+
+TaemCKadai.main
