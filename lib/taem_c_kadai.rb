@@ -20,31 +20,32 @@ module TaemCKadai
       puts Pebbles::Soreyuke.AA('apm', '身長は?')
       height = Readline.readline("(cm)> ")
       puts Pebbles::Soreyuke.AA('cpm', '私の身長は' + height + "です")
+      sleep(1)
       puts Pebbles::Soreyuke.AA('apm', '体重は?')
       weight = Readline.readline('(kg)> ')
       puts Pebbles::Soreyuke.AA('cpm', '私の体重は' + weight + 'です')
       bmi = TaemCKadai.needed_bmi(weight, height)
+      sleep(1)
       puts Pebbles::Soreyuke.AA('apm', 'お前のBMIは' + bmi.to_s + 'だ')
       #　カロリー
+      sleep(1)
       puts Pebbles::Soreyuke.AA('apm', '性別は?')
       sex = Readline.readline('(m or f)> ')
+      sex.upcase!
       case sex
-        when 'm' then
+        when 'M' then
           puts Pebbles::Soreyuke.AA('cpm', '男です')
-        when 'f' then
+        when 'F' then
           puts Pebbles::Soreyuke.AA('cpm', '女です')
         else
           puts '判別できません'
       end
-      sex = sex.upcase!
-      calorie = TaemCKadai.needed_calorie(sex, weight)
+      calorie = TaemCKadai.needed_calorie(sex, weight.to_i)
+      sleep(1)
       puts Pebbles::Soreyuke.AA('apm', 'お前の基礎代謝量は' + calorie.to_s + "だ")
     else
       puts Pebbles::Soreyuke.AA('apm', '人の話はちゃんと聞け')
     end
 
-
-    puts TaemCKadai.needed_calorie("M", 60)
-    # puts TaemCKadai.func_fumin()
   end
 end
