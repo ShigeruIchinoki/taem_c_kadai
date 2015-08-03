@@ -7,7 +7,7 @@ require "taem_c_kadai/needed_bmi"
 require "readline"
 
 module TaemCKadai
-  def main
+  def self.ask
     greeting = '不眠に悩んでいるのか体型に悩んでいるのか教えて'
     puts Pebbles::Soreyuke.AA('apm', greeting)
     input = Readline.readline("enter fumin or weight > ")
@@ -30,6 +30,6 @@ module TaemCKadai
 
 
     puts TaemCKadai.needed_calorie("M", 60)
-    puts TaemCKadai.func_fumin()
+    # puts TaemCKadai.func_fumin()
   end
 end
