@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require "pebbles-soreyuke"
 require "taem_c_kadai/version"
-#require "taem_c_kadai/fumin"
+require "taem_c_kadai/fumin"
 require "taem_c_kadai/needed_calorie"
 require "taem_c_kadai/needed_bmi"
 require "readline"
@@ -14,6 +14,8 @@ module TaemCKadai
     case input
     when 'fumin' then
       ## 不眠の処理
+      str = func_fumin()
+      puts Pebbles::Soreyuke.AA('apm',  "不眠度測定結果:" + str )
     when 'weight' then
       ## 体重系の処理
       # BMI
