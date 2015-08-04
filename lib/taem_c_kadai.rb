@@ -44,9 +44,5 @@ module TaemCKadai
     else
       puts Pebbles::Soreyuke.AA('apm', '人の話はちゃんと聞け')
     end
-
-
-    puts TaemCKadai.needed_calorie("M", 60)
-    # puts TaemCKadai.func_fumin()
   end
 end
