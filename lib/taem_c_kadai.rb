@@ -54,6 +54,13 @@ module TaemCKadai
       calorie = TaemCKadai.needed_calorie(sex, weight.to_i)
       sleep(1)
       puts Pebbles::Soreyuke.AA('apm', 'お前の基礎代謝量は' + calorie.to_s + "だ")
+      sleep(1)
+
+      # 時分変換
+      conv_hm = ->(hour) { hour.to_i.to_s + '時間' + ((hour % 1) * 60).to_i.to_s + '分' }
+      # 運動に変換
+      puts Pebbles::Soreyuke.AA('apm', 'テニスだと' + conv_hm.call(TaemCKadai.needed_calorie_by_tennis(sex, weight.to_i)) + '、')
+      puts Pebbles::Soreyuke.AA('apm', '寝てるだけなら' + conv_hm.call(TaemCKadai.needed_calorie_by_sleeping(sex, weight.to_i)) + "必要だ")
     else
       puts Pebbles::Soreyuke.AA('apm', '人の話はちゃんと聞け')
     end
