@@ -21,14 +21,23 @@ module TaemCKadai
       # BMI
       puts Pebbles::Soreyuke.AA('apm', '身長は?')
       height = Readline.readline("(cm)> ")
-      puts Pebbles::Soreyuke.AA('cpm', '私の身長は' + height + "です")
+      if height.to_f.round.to_i != 0#整数以外は0になる。
+        puts Pebbles::Soreyuke.AA('cpm', '私の身長は' + height + "です")
+      else
+        puts "数字を入力して下さい"; exit()
+      end
       sleep(1)
       puts Pebbles::Soreyuke.AA('apm', '体重は?')
       weight = Readline.readline('(kg)> ')
-      puts Pebbles::Soreyuke.AA('cpm', '私の体重は' + weight + 'です')
+      if weight.to_f.round.to_i != 0
+        puts Pebbles::Soreyuke.AA('cpm', '私の体重は' + weight + 'です')
+      else
+        puts "数字を入力して下さい"; exit()
+      end
+      sleep(1)
       bmi = TaemCKadai.needed_bmi(weight, height)
       sleep(1)
-      puts Pebbles::Soreyuke.AA('apm', 'お前のBMIは' + bmi.to_s + 'だ')
+      puts Pebbles::Soreyuke.AA('apm', 'お前のBMIは' + bmi.round(1).to_s + 'だ')
       #　カロリー
       sleep(1)
       puts Pebbles::Soreyuke.AA('apm', '性別は?')
