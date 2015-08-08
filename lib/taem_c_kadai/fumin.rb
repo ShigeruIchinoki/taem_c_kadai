@@ -5,12 +5,18 @@ module TaemCKadai
     print ("簡単な質問からあなたの不眠度が分かります。\n")
     num = 1 
     while num < 9 do
-      self.question(num)  
-      select = gets.to_i
-      if select <= 3 && select >= 0 then
-        num += 1
+      self.question(num)
+      select = gets.chomp  
+      if select =~ /^[0-9]+$/ then 
+        select_num = select.to_i
+        if select_num <= 3 && select_num >= 0 then
+          num += 1
+        else
+          print ("０〜３を入力してください。\n")
+        end
+                  
       else
-        print ("０〜３を入力してください。\n")
+        print ("半角数字で０〜３を入力してください。\n")
       end
     end
 
