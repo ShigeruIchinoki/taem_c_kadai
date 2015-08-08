@@ -22,7 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. require "taem_c_kadai"
+2. TaemCKadai.ask()
 
 ## Development
 
