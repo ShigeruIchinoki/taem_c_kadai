@@ -10,6 +10,7 @@ module TaemCKadai
       if select =~ /^[0-9]+$/ then 
         select_num = select.to_i
         if select_num <= 3 && select_num >= 0 then
+          count += select_num
           num += 1
         else
           print ("０〜３を入力してください。\n")
